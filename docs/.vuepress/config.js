@@ -5,7 +5,7 @@ module.exports = {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'javascript', link: '/javascript/' },
-            { text: 'External', link: 'https://google.com' }
+            { text: 'Github', link: 'https://github.com/bingo618' }
         ],
         sidebar: {
             '/javascript/': [
