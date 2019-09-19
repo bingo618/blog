@@ -1,0 +1,4 @@
+{
+// 控制 VSCode 的语义和语法检查，如果设置为 false，那么语法和语义检查全部关闭
+"javascript.validate.enable": true,
+}
