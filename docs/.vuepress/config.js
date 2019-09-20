@@ -21,10 +21,13 @@ module.exports = {
         ],
         sidebar: {
             '/javascript/': [
+                ['data', '数据类型'],
                 ['function', '函数'],
                 ['var', '作用域'],
-                ['prototype', '原型与原型链']
+                ['prototype', '原型与原型链'],
             ]
         }
     }
 };
+
+
