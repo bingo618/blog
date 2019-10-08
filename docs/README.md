@@ -4,7 +4,7 @@ heroImage: http://pvyhasjid.bkt.clouddn.com/blog/20190822/VHuiem2NGyju.jpg?image
 actionText: 马上GET →
 actionLink: /javascript/
 features:
-- title: 前端开发哈哈哈
+- title: 前端开发
   details: 记录前端开发中的笔记和文章。
 - title: 生活感悟
   details: 记录生活的点滴。
