@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: http://pvyhasjid.bkt.clouddn.com/blog/20190822/VHuiem2NGyju.jpg?imageslim
+heroImage: http://static.hbihy.com/blog/2020-03-07-snowy-mountain-peak-with-sunrise-glow-2210x1243.jpg
 actionText: 马上GET →
 actionLink: /javascript/
 features:
