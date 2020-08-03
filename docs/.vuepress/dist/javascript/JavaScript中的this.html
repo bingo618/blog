@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScript中的this | BINGO的博客</title>
+    <meta name="description" content="记录工作和生活">
+    <meta name="generator" content="VuePress 1.3.1">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.26cb1efd.css" as="style"><link rel="preload" href="/assets/js/app.993089a0.js" as="script"><link rel="preload" href="/assets/js/2.7cc7ab19.js" as="script"><link rel="preload" href="/assets/js/8.81aca7a1.js" as="script"><link rel="prefetch" href="/assets/js/10.d6c373a4.js"><link rel="prefetch" href="/assets/js/11.3cf69580.js"><link rel="prefetch" href="/assets/js/12.9323f138.js"><link rel="prefetch" href="/assets/js/13.28bc9424.js"><link rel="prefetch" href="/assets/js/14.238d4eff.js"><link rel="prefetch" href="/assets/js/15.abe7bccd.js"><link rel="prefetch" href="/assets/js/3.ab8c4dbe.js"><link rel="prefetch" href="/assets/js/4.b2c0328d.js"><link rel="prefetch" href="/assets/js/5.46a36351.js"><link rel="prefetch" href="/assets/js/6.6b22dad8.js"><link rel="prefetch" href="/assets/js/7.db32117d.js"><link rel="prefetch" href="/assets/js/9.05786009.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.26cb1efd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">BINGO的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/javascript/" class="nav-link router-link-active">
+  前端开发
+</a></div><div class="nav-item"><a href="https://github.com/bingo618" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/javascript/" class="nav-link router-link-active">
+  前端开发
+</a></div><div class="nav-item"><a href="https://github.com/bingo618" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/javascript/runtime.html" class="sidebar-link">JavaScript在浏览器中是如何执行的？</a></li><li><a href="/javascript/JavaScript内存管理.html" class="sidebar-link">JavaScript内存管理</a></li><li><a href="/javascript/执行上下文与执行上下文栈.html" class="sidebar-link">执行上下文与执行上下文栈</a></li><li><a href="/javascript/作用域，作用域链与闭包.html" class="sidebar-link">作用域，作用域链与闭包</a></li><li><a href="/javascript/JavaScript中的this.html" class="active sidebar-link">JavaScript中的this</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/javascript/JavaScript中的this.html#一、绑定规则" class="sidebar-link">一、绑定规则</a></li><li class="sidebar-sub-header"><a href="/javascript/JavaScript中的this.html#二、绑定优先级" class="sidebar-link">二、绑定优先级</a></li></ul></li><li><a href="/javascript/JavaScript事件循环机制Event Loop.html" class="sidebar-link">JavaScript事件循环机制Event Loop</a></li><li><a href="/javascript/JavaScript中call、apply、bind函数的实现.html" class="sidebar-link">JavaScript中call、apply、bind函数的实现</a></li><li><a href="/javascript/JavaScript中new运算符实现.html" class="sidebar-link">JavaScript中new运算符实现</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascript中的this"><a href="#javascript中的this" class="header-anchor">#</a> JavaScript中的this</h1> <p>this 是和<strong>执行上下文</strong>绑定的，也就是说每个执行上下文中都有一个 this。
+执行上下文主要分为三种——全局执行上下文、函数执行上下文和 eval 执行上下文，所以对应的 this 也只有这三种——全局执行上下文中的 this、函数中的 this 和 eval 中的 this。</p> <p><img src="https://cdn.nlark.com/yuque/0/2020/png/184136/1591607698431-4001d462-9be1-4d2c-8105-f076dd2fd81d.png#align=left&amp;display=inline&amp;height=615&amp;margin=%5Bobject%20Object%5D&amp;name=b398610fd8060b381d33afc9b86f988d.png&amp;originHeight=615&amp;originWidth=1142&amp;size=269159&amp;status=done&amp;style=none&amp;width=1142" alt="b398610fd8060b381d33afc9b86f988d.png"> <strong>作用域链和 this 是两套不同的系统，它们之间基本没太多联系。 所以每个函数的 this 是在调用时被绑定的，完全取决于函数的调用位置(也就是函数的调用方法)。</strong>
+**</p> <h2 id="一、绑定规则"><a href="#一、绑定规则" class="header-anchor">#</a> 一、绑定规则</h2> <h3 id="_1-1-默认绑定"><a href="#_1-1-默认绑定" class="header-anchor">#</a> 1.1 默认绑定</h3> <p>独立函数调用时，<code>this</code> 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， <code>this</code>绑定至 <code>undefined</code>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 2</span>
+</code></pre></div><p>严格模式下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;use strict&quot;</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">,</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// TypeError: this is undefined</span>
+</code></pre></div><h3 id="_1-2-隐式绑定"><a href="#_1-2-隐式绑定" class="header-anchor">#</a> 1.2 隐式绑定</h3> <p>当函数引用有上下文对象时（即函数作为引用属性被添加到对象中），隐式绑定规则会把函数调用中的 <code>this</code> 绑定到这个上下文对象。<strong>对象属性引用链中只有最顶层或者说最后一层会影响调用位置。</strong>
+**</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span> 
+  a<span class="token operator">:</span> <span class="token number">42</span><span class="token punctuation">,</span>
+	foo<span class="token operator">:</span> foo 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span> 
+  a<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+	obj2<span class="token operator">:</span> obj2 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+obj1<span class="token punctuation">.</span>obj2<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 42</span>
+</code></pre></div><h4 id="隐式丢失"><a href="#隐式丢失" class="header-anchor">#</a> 隐式丢失</h4> <p>绑定至上下文对象的函数被赋值给一个新的函数，然后调用这个新的函数时：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  foo<span class="token operator">:</span> foo
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> bar <span class="token operator">=</span> obj<span class="token punctuation">.</span>foo<span class="token punctuation">;</span> <span class="token comment">//函数别名</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token string">&quot;这是全局变量喔&quot;</span><span class="token punctuation">;</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &quot;这是全局变量喔&quot;</span>
+</code></pre></div><p>传入回调函数时：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">doFoo</span><span class="token punctuation">(</span><span class="token parameter">fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &lt;-- 调用位置</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  foo<span class="token operator">:</span> foo
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token string">&quot;这是全局变量喔&quot;</span><span class="token punctuation">;</span>
+<span class="token function">doFoo</span><span class="token punctuation">(</span> obj<span class="token punctuation">.</span>foo <span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &quot;这是全局变量喔&quot;</span>
+</code></pre></div><p>其实这就是第一种情况的变种，实际上参数传递就是一种隐式赋值。除了开发人员自定义的函数，在将函数传入语言内置的函数比如 <code>setTimeout</code> 时，同样会发生隐式丢失的情况。</p> <h3 id="_1-3-显示绑定"><a href="#_1-3-显示绑定" class="header-anchor">#</a> 1.3 显示绑定</h3> <p>显式绑定的核心是 JavaScript 内置的 <code>call(..)</code> 和 <code>apply(..)</code> 方法，这两个方法在 JavaScript 提供的绝大多数函数以及开发者自己创建的所有函数上都可以使用。
+<code>call(..)</code> 和 <code>apply(..)</code>的第一个参数是一个对象（二者区别在后面传入的参数形式，这里不是重点，不讨论），他们会将 <code>this</code> 绑定到这个对象上。因为你可以直接指定 <code>this</code> 绑定的对象，所以这条规则被称为显式绑定。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 2</span>
+</code></pre></div><p>如果 <code>call</code> 或者 <code>apply</code> 传入的第一个参数是原始值（字符串类型、布尔类型或者数字类型），那么该原始值会被转换成它的对象形式（new String()、new Boolean() 或 new Number()），俗称“装箱”。</p> <h3 id="_1-4-new绑定"><a href="#_1-4-new绑定" class="header-anchor">#</a> 1.4  new绑定</h3> <p>使用 <code>new</code> 来调用函数时，会自动执行下面的操作：</p> <ol><li>创建一个全新的对象</li> <li>这个新对象会被执行 [[原型]] 连接</li> <li>这个新对象会绑定到函数调用的 <code>this</code></li> <li>如果函数没有返回其他对象，那么 <code>new</code> 表达式中的函数调用会自动返回这个新对象</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 2</span>
+</code></pre></div><p>使用 <code>new</code> 来调用 <code>foo(..)</code> 时，会构造一个新对象并把它绑定到 <code>foo(..)</code> 调用中的 <code>this</code> 上。</p> <h2 id="二、绑定优先级"><a href="#二、绑定优先级" class="header-anchor">#</a> 二、绑定优先级</h2> <p>函数是否在 <code>new</code> 中调用（<code>new</code> 绑定）？如果是的话 <code>this</code> 绑定的是新创建的对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>函数是否通过 <code>call</code>、<code>apply</code> （显示绑定）或者硬绑定？如果是的话，<code>this</code> 绑定的是指定的对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>函数是否在某个上下文对象中调用（隐式绑定）？如果是的话，<code>this</code> 绑定的是那个上下文对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> bar <span class="token operator">=</span> obj1<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到 <code>undefined</code>，否则绑定到全局对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/javascript/作用域，作用域链与闭包.html" class="prev">
+        作用域，作用域链与闭包
+      </a></span> <span class="next"><a href="/javascript/JavaScript事件循环机制Event Loop.html">
+        JavaScript事件循环机制Event Loop
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.993089a0.js" defer></script><script src="/assets/js/2.7cc7ab19.js" defer></script><script src="/assets/js/8.81aca7a1.js" defer></script>
+  </body>
+</html>
