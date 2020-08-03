@@ -9,12 +9,12 @@ module.exports = {
       },
       {
         text: "前端开发",
-        link: "/javascript/",
+        link: "/javascript/runtime",
       },
-      {
-        text: "生活感悟",
-        link: "/life/",
-      },
+      // {
+      //     text: '生活感悟',
+      //     link: '/life/'
+      // },
       {
         text: "Github",
         link: "https://github.com/bingo618",
